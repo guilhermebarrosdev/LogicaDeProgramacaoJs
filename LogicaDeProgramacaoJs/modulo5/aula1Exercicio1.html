@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula1 - Exercicio 1</title>
+  </head>
+  <body>
+    <h1>Lógica de programação com JavaScript.</h1>
+    <script>
+      var dias = new Array(
+        "domingo",
+        "segunda-feira",
+        "terça-feira",
+        "quarta-feira",
+        "quinta-feira",
+        "sexta-feira",
+        "sábado"
+      );
+
+      var hoje = new Date();
+      var diaDaSemana = hoje.getDay();
+
+      alert("Bem vindo, hoje é " + dias[diaDaSemana]);
+    </script>
+  </body>
+</html>

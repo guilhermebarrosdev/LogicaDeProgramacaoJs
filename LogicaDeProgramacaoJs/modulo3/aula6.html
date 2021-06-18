@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 6</title>
+  </head>
+  <body>
+    <h1>Lógica de programação com JavaScript.</h1>
+    <button onclick="iniciarCalc('+')">+</button>
+    <button onclick="iniciarCalc('-')">-</button>
+    <button onclick="iniciarCalc('*')">*</button>
+    <button onclick="iniciarCalc('/')">/</button>
+    <div id="output"></div>
+    <script>
+      var n1 = prompt("Digite um número");
+      n1 = parseFloat(n1);
+
+      escreve(n1);
+
+      function iniciarCalc(simbolo) {
+        var n1 = document.querySelector("#output").textContent;
+        n1 = parseFloat(n1);
+
+        var n2 = prompt("Digite outro número");
+        n2 = parseFloat(n2);
+
+        try {
+          var msg = calc(simbolo, n1, n2);
+        } catch (e) {
+          alert(e);
+          return;
+        }
+
+        escreve(msg);
+      }
+
+      function escreve(mensagem) {
+        var output = document.querySelector("#output");
+        output.innerHTML = mensagem;
+      }
+
+      function calc(simbolo, n1, n2) {
+        if (
+          simbolo !== "+" &&
+          simbolo !== "-" &&
+          simbolo !== "*" &&
+          simbolo !== "/"
+        ) {
+          throw new Error("Digite um simbolo valido");
+          return 0;
+        }
+
+        if (isNaN(n1) || isNaN(n2)) {
+          throw new Error("Passar somente números");
+          return 0;
+        }
+
+        var numeroCalc = null;
+
+        switch (simbolo) {
+          case "+":
+            numeroCalc = n1 + n2;
+            break;
+
+          case "-":
+            numeroCalc = n1 - n2;
+            break;
+
+          case "*":
+            numeroCalc = n1 * n2;
+            break;
+
+          case "/":
+            numeroCalc = n1 / n2;
+            break;
+        }
+
+        return numeroCalc;
+      }
+    </script>
+  </body>
+</html>

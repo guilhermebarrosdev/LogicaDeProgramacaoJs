@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 1</title>
+  </head>
+  <body>
+    <h1>Lógica de programação com JavaScript.</h1>
+    <script>
+      function dizBla(n) {
+        // var msg = "";
+        // while (n--) {
+        //   msg += "bla";
+        // }
+        // return msg;
+        return n > 1 ? dizBla(--n) + "bla" : "bla";
+        //     if (n > 1 ) {
+        //       return dizBla(--n) + "bla";
+        //     } else {
+        //       return "bla";
+        //     }
+      }
+      console.log(dizBla(2)); // bla bla
+      console.log(dizBla(5)); // bla bla bla bla bla
+    </script>
+  </body>
+</html>

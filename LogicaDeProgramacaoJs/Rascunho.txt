@@ -1,0 +1,41 @@
+Operadores lógicos
+
+Ordem de execução
+1º  ! (Nao/not)
+2º  && (E/and)
+3º  || (Ou/or)
+
+Tipos de loop 
+
+For 
+do while 
+while
+
+Funções Void(vazia)
+    Funções que não retornam nenhum valor.
+    São úteis quando queremos reaproveitar código.
+
+Funções que recebem valores
+    (mais conhecidas com argumentos ou parâmetros)
+    são úteis para reaproveitar ainda mais o seus códigos.
+
+try   catch(erro)  
+    Tratam da exceção.
+    Não deveria ter ocorrido, mas ocorreu.
+    Nunca subestime a capacidade do usuário.
+
+Valores vs. Referência
+    No JavaScrip: Somente string, number e boolean são passados por valores.
+    Todos os outros demais são passados por referência.
+
+Alterando o fluxo de um programa
+    return (sai fora da função e retorna o valor)
+    break (sai fora do loop apenas mas continua execução da função)
+    continue (pula o loop mas continua a partir da proxima interação)
+
+
+
+
+
+
+

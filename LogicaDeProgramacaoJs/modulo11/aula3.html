@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 3</title>
+  </head>
+  <body>
+    <h1>Lógica de programação com JavaScript.</h1>
+    <script>
+      function teste1() {
+        console.log("teste 1 chamado");
+      }
+      function teste2(p) {
+        console.log("teste 2 chamado recebendo p");
+      }
+      function executa(cb) {
+        console.log("executa chamado");
+        if (typeof cb === "function") {
+          cb("parametro de callback");
+        }
+      }
+      executa(teste1);
+      executa(function (x) {
+        console.log("função anonima", x);
+      });
+    </script>
+  </body>
+</html>

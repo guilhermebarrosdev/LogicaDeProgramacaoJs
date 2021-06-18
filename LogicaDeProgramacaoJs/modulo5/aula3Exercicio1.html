@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 3 - Exercicio 1</title>
+  </head>
+  <body>
+    <h1>Lógica de programação com JavaScript.</h1>
+    <div id="output"></div>
+    <script>
+      var arr = [
+        { nome: "Lucas", email: "lucas@email.com" },
+        { nome: "José", email: "jose@email.com" },
+        { nome: "Guilherme", email: "guilherme@email.com" },
+      ];
+
+      var msg = "";
+      for (var i = 0; i < arr.length; i++) {
+        msg += "<h2>Nome:" + arr[i].nome + "</h2>";
+        msg += "<p> email: " + arr[i].email + "</p><br>";
+      }
+
+      document.querySelector("#output").innerHTML = msg;
+    </script>
+  </body>
+</html>
